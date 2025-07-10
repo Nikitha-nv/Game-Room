@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Game Room</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- The game room area -->
+    <div id="game-room-area">
+
+        <!-- The game room start page -->
+        <div id="game-room-start-page">
+            <div class="row">
+                <div class="col">
+                    <div class="title">The Game Room</div>
+                    <div class="row">
+                        <button id="start-signin-button">Sign In</button>
+                        <button id="start-register-button">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The game room register page -->
+        <div id="game-room-register-page" style="display: none">
+            <div class="row">
+                <form id="register-form" class="col">
+                    <div class="subtitle">Register</div>
+                    <input id="register-username" maxlength="10" placeholder="Enter your username"></input>
+                    <select id="register-avatar">
+                        <option class="placeholder" value="">Select your avatar</option>
+                    </select>
+                    <input id="register-name" maxlength="16" placeholder="Enter your name"></input>
+                    <input id="register-password" type="password" placeholder="Enter your password"></input>
+                    <input id="register-confirm" type="password" placeholder="Enter your password again"></input>
+                    <div class="row">
+                        <button id="register-button" type="submit">Register</button>
+                        <button class="back-button" type="button">Back</button>
+                    </div>
+                    <div id="register-message" class="message"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- The game room signin page -->
+        <div id="game-room-signin-page" style="display: none">
+            <div class="row">
+                <form id="signin-form" class="col">
+                    <div class="subtitle">Sign In</div>
+                    <input id="signin-username" placeholder="Enter your username"></input>
+                    <input id="signin-password" type="password" placeholder="Enter your password"></input>
+                    <div class="row">
+                        <button id="signin-button" type="submit">Sign In</button>
+                        <button class="back-button" type="button">Back</button>
+                    </div>
+                    <div id="signin-message" class="message"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- The game room content page -->
+        <div id="game-room-content-page" style="display: none">
+            <div class="row">
+                <div class="col">
+                    <div class="title">
+                        Hello
+                        <span id="game-room-user-avatar">avatar</span>
+                        <span id="game-room-user-name">name</span>!
+                    </div>
+                    <div class="row">
+                        <form id="signout-form" class="col">
+                            <div class="row"><button id="signout-button" type="submit">Signout</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript files for the game room -->
+    <script src="scripts/avatar.js"></script>
+    <script src="scripts/game_room.js"></script>
+
+    <!-- Initialize the game room -->
+    <script>
+    $(function() {
+        // Initialize the game room functionalities
+        GameRoom.init();
+
+        // Validate the log in
+        GameRoom.validate();
+    });
+    </script>
+</body>
+</html>

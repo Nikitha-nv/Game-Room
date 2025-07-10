@@ -1,0 +1,91 @@
+* {
+    font-family: "Helvetica", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+form {
+    align-items: stretch !important;
+}
+
+form input, form select {
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+form button {
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 10px 15px;
+}
+
+/*
+ * Other settings
+ */
+
+.row, .col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.subtitle {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.message {
+    text-align: center;
+    font-style: italic;
+}
+
+/*
+ * Game room rules
+ */
+
+#game-room-area {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+}
+
+#game-room-start-page,
+#game-room-signin-page,
+#game-room-register-page,
+#game-room-content-page {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#signin-form, #register-form {
+    width: 50%;
+    min-width: 400px;
+}
